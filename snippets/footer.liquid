@@ -1,5 +1,20 @@
 <footer class="footer-global">
-  {% for link in linklists.main-menu.links %}
+
+  <div class="footer-top">
+
+  </div>
+
+  <div class="footer-bottom">
+    {% assign copyright_date = 'now' | date: '%Y' %}
+    <span>{{ 'footer.bottom.copyright' | t: date: copyright_date }}</span>
+  </div>
+
+
+
+
+
+
+  <!-- {% for link in linklists.main-menu.links %}
       {% assign child_list_handle = link.title | handleize %}
       {% if linklists[child_list_handle].links != blank %}
         <a href="{{ link.url }}">{{ link.title }}</a>
@@ -9,5 +24,5 @@
       {% else %}
         <a href="{{ link.url }}">{{ link.title }}</a>
       {% endif %}
-    {% endfor %}
+    {% endfor %} -->
 </footer>
