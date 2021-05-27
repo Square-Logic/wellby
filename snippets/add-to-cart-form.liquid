@@ -26,13 +26,13 @@
   {{ current_variant.price | money }}
 
   <label for="Quantity">quantity</label>
-  <input type="number" id="Quantity" name="quantity" value="1" min="1" {% if product.variants.size == 1 %}max="{{ product.variants.first.inventory_quantity }}" {% endif %}>
+  <input type="number" class="js-quantity-field" id="Quantity" name="quantity" value="1" min="1" {% if product.variants.size == 1 %}max="{{ product.variants.first.inventory_quantity }}" {% endif %}>
 
   <button class="quantity-button js-quantity-button minus" type="button" disabled>
     &ndash;
   </button>
 
-  <span class="quantity-text">
+  <span class="quantity-text js-quantity-text">
     1
   </span>
 
