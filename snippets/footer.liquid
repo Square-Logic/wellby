@@ -7,8 +7,21 @@
   <div class="footer-bottom">
     {% assign copyright_date = 'now' | date: '%Y' %}
     <span>{{ 'footer.bottom.copyright' | t: date: copyright_date }}</span>
-  </div>
+    
+    <div class="social-links">
+      <a href="{{ 'footer.social.facebook_url' | t }}" target="new">
+        <img src="{{ 'facebook.svg' | asset_url }}" alt="{{ 'footer.social.alt' | t: social: 'Facebook' }}">
+      </a>
 
+      <a href="https://www.instagram.com/{{ 'footer.social.instagram_handle' | t }}" target="new">
+        <img src="{{ 'instagram.svg' | asset_url }}" alt="{{ 'footer.social.alt' | t: social: 'Instagram' }}">
+      </a>
+
+      <a href="https://www.twitter.com/{{ 'footer.social.twitter_handle' | t }}" target="new">
+        <img src="{{ 'twitter.svg' | asset_url }}" alt="{{ 'footer.social.alt' | t: social: 'Twitter' }}">
+      </a>
+    </div>
+  </div>
 
 
 

@@ -42,9 +42,9 @@
       "copyright": "©{{ date }}  Wellby, Inc."
     },
     "social": {
-      "facebook_url": "https://www.facebook.com/superhidotcom/",
-      "twitter_handle": "superhi_",
-      "instagram_handle": "hisuperhi",
+      "facebook_url": "https://www.facebook.com",
+      "twitter_handle": "",
+      "instagram_handle": "",
       "alt": "Wellby on {{ social }}"
     }
   },
