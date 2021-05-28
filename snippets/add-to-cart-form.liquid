@@ -41,5 +41,5 @@
     +
   </button>
 
-  <button type="submit" name="add" id="AddToCart">Add to cart</button>
+  <button type="submit" name="add" id="add-to-cart-button" {% if product.variants.size > 1 %}disabled{% endif %}>Add to cart</button>
 </form>
