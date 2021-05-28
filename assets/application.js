@@ -37,7 +37,12 @@ $(document).ready(function() {
       radio = $(this),
       form = radio.closest('form'),
       max = radio.attr('data-inventory-quantity'),
-      quantity = form.find('.js-quantity-field');
+      quantity = form.find('.js-quantity-field'),
+      addToCartButton = form.find('#add-to-cart-button');
+
+    if (addToCartButton.prop('disabled') === true) {
+      addToCartButton.prop('disabled', false);
+    }  
 
     quantity.attr('max', max);
 
