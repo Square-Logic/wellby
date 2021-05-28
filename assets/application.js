@@ -8,11 +8,11 @@ $(document).ready(function() {
       quantityValue = parseInt(quantity.val()),
       max = quantity.attr('max') ? parseInt(quantity.attr('max')) : null;
 
-      if (button.hasClass('plus')) {
-        quantity.val(quantityValue + 1).change();
-      } else if (button.hasClass('minus')) {
-        quantity.val(quantityValue - 1).change();
-      }
+    if (button.hasClass('plus') && (max === null || quantityValue + 1 <= max)) {
+      quantity.val(quantityValue + 1).change();
+    } else if (button.hasClass('minus')) {
+      quantity.val(quantityValue - 1).change();
+    }
   });
 
   $(document).on('change', '.js-quantity-field', function(event) {
@@ -23,13 +23,27 @@ $(document).ready(function() {
       shouldDisableMinus = parseInt(this.value) === 1,
       minusButton = form.find('.js-quantity-button.minus');
 
-      quantityText.text(this.value);
+    quantityText.text(this.value);
 
-      if (shouldDisableMinus) {
-        minusButton.prop('disabled', true);
-      } else if (minusButton.prop('disabled') === true) {
-        minusButton.prop('disabled', false);
-      }
+    if (shouldDisableMinus) {
+      minusButton.prop('disabled', true);
+    } else if (minusButton.prop('disabled') === true) {
+      minusButton.prop('disabled', false);
+    }
+  });
+
+  $(document).on('change', '.js-variant-radio', function(event) {
+    let
+      radio = $(this),
+      form = radio.closest('form'),
+      max = radio.attr('data-inventory-quantity'),
+      quantity = form.find('.js-quantity-field');
+
+    quantity.attr('max', max);
+
+    if (parseInt(quantity.val()) > max) {
+      quantity.val(max).change();
+    }
   });
 
 });
