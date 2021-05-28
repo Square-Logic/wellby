@@ -21,7 +21,9 @@ $(document).ready(function() {
       form = field.closest('form'),
       quantityText = form.find('.js-quantity-text'),
       shouldDisableMinus = parseInt(this.value) === 1,
-      minusButton = form.find('.js-quantity-button.minus');
+      shouldDisablePlus = parseInt(this.value) === parseInt(field.attr('max')),
+      minusButton = form.find('.js-quantity-button.minus'),
+      plusButton = form.find('.js-quantity-button.plus');
 
     quantityText.text(this.value);
 
@@ -29,6 +31,12 @@ $(document).ready(function() {
       minusButton.prop('disabled', true);
     } else if (minusButton.prop('disabled') === true) {
       minusButton.prop('disabled', false);
+    }
+
+    if (shouldDisablePlus) {
+      plusButton.prop('disabled', true);
+    } else if (plusButton.prop('disabled') === true) {
+      plusButton.prop('disabled', false);
     }
   });
 
