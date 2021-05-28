@@ -64,10 +64,25 @@ body {
 }
 
 .header-global {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-global {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
   background-color: var(--header-background-color);
+}
+
+.header-global .shop-link {
+  order: -1;
+}
+
+.header-global .cart-close-text {
+  display: none;
 }
