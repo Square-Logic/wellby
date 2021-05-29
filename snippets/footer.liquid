@@ -2,7 +2,7 @@
 
   <div class="footer-top grid">
     <ul class="products-list">
-      {{ 'footer.list.products' | t }}
+      <h4>{{ 'footer.list.products' | t }}</h4>
       {% for product in collections.frontpage.products limit: 4 %}
       <li>
         <a href="{{ product.url }}">{{ product.title }}</a>
@@ -11,7 +11,7 @@
     </ul>
 
     <ul class="contact-list">
-      {{ linklists.footer.title }}
+      <h4>{{ linklists.footer.title }}</h4>
 
       {% for link in linklists.footer.links %}
       <li>
@@ -29,7 +29,7 @@
     </ul>
 
     <div class="about-us">
-      {{ 'general.about.title' | t }}
+      <h4>{{ 'general.about.title' | t }}</h4>
       <p>{{ 'general.about.description' | t }}</p>
     </div>
 
