@@ -138,6 +138,11 @@ p a:hover {
 }
 
 /* Utility Classes */
+.wrapper {
+  padding-left: var(--offset-global);
+  padding-right: var(--offset-global);
+}
+
 .grid {
   display: grid;
   column-gap: var(--gutter-global);
@@ -168,9 +173,20 @@ p a:hover {
   text-align: center;
 }
 
-.wrapper {
-  padding-left: var(--offset-global);
-  padding-right: var(--offset-global);
+.text-white {
+  color: var(--white);
+}
+
+.text-white h1,.h1,h2,.h2,h3,.h3,h4,.h4 {
+  color: var(--white);
+}
+
+.text-white p {
+  color: var(--text-color-white);
+}
+
+.text-white a {
+  color: var(--white);
 }
 
 /* Header */
@@ -237,4 +253,9 @@ p a:hover {
   height: 50vh;
   min-height: 400px;
   padding-bottom: var(--offset-global);
+}
+
+/* Shared Product Styles */
+.product-info-section {
+  color: var(--white);
 }
