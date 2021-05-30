@@ -10,7 +10,7 @@
   --text-color: #555555;
   --text-color-white: #CCCCCC;
   --text-color-light: #707070;
-  --text-color-light-wite: #AAAAAA;
+  --text-color-light-white: #AAAAAA;
 
   --gold: #BEA482;
 
@@ -36,6 +36,39 @@
 
   --type-bold: 700;
   --type-book: 400;
+
+  /* 
+  reset-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    text-align: left;
+  }
+
+  flex-space-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } 
+  
+  spaced-caps {
+    font-size: var(--type-body-med);
+    font-weight: var(--type-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+  } */
 }
 
 /* Base */
@@ -137,7 +170,53 @@ p a:hover {
   color: var(--black);
 }
 
+button[type="submit"],
+.button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  text-align: left;
+  width: 100%;
+  padding: var(--line-global);
+  text-align: center;
+  font-size: var(--type-body-med);
+  line-height: var(--line-global);
+  background: var(--gold);
+  color: var(--white);
+}
+
+button[type="submit"]:disabled,
+.button {
+  opacity: 0.75;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+button[type="submit"]:not(:disabled):hover,
+.button {
+  background: var(--gold);
+}
+
 /* Utility Classes */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .wrapper {
   padding-left: var(--offset-global);
   padding-right: var(--offset-global);
@@ -311,4 +390,58 @@ p a:hover {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* Add to Cart Form */
+#add-to-cart-form{
+
+}
+
+.option-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: var(--line-global) 0;
+  border-top: var(--standard-border-white);
+}
+
+.option-row:last-of-type {
+  border-bottom: var(--standard-border-white);
+}
+
+.option-title {
+  color: var(--text-color-white);
+}
+
+.variant-radio {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.variant-radio + label {
+  font-size: var(--type-body-med);
+  font-weight: var(--type-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  display: inline-block;
+  cursor: pointer;
+  padding: calc(var(--line-global) / 5 );
+  border: 1px solid transparent;
+  color: var(--text-color-light-white);
+}
+
+.variant-radio:checked + label {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.variant-radio:disabled + label {
+  cursor: not-allowed;
+  text-decoration: line-through;
+  color: var(--text-color);
 }
