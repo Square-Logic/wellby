@@ -70,7 +70,22 @@ $(document).ready(function() {
       })      
     },
     onCartUpdate = function() {
-      alert('cart is updated');
+      $.ajax({
+        type: 'GET',
+        url: '/cart',
+        context: document.body,
+        success: function(context) {
+          let
+            dataCartContents = $(context).find('.js-cart-page-contents'),
+            dataCartHtml = dataCartContents.html(),
+            dataCartItemCount = dataCartContents.attr('data-cart-item-count'),
+            miniCartContents = $('.js-mini-cart-contents'),
+            cartItemCount = $('js-cart-item-count');
+
+          cartItemCount.text(dataCartItemCount);
+          miniCartContents.html(dataCartHtml);
+        }
+      });
     },
     onError = function(XMLHttpRequest, textStatus) {
       let data = XMLHttpRequest.responseJSON;
