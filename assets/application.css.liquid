@@ -187,7 +187,11 @@ button[type="submit"],
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  text-align: left;
+  text-align: left; 
+}
+
+button[type="submit"],
+.button {
   width: 100%;
   padding: var(--line-global);
   text-align: center;
@@ -360,7 +364,7 @@ button[type="submit"]:not(:disabled):hover,
   margin: 0 auto;
 }
 
-.product-info-section .below-title p {
+.product-info-section p {
   margin-bottom: var(--line-global);
 }
 
@@ -445,4 +449,40 @@ button[type="submit"]:not(:disabled):hover,
   cursor: not-allowed;
   text-decoration: line-through;
   color: var(--text-color);
+}
+
+.quantity-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  font-size: var(--line-global);
+  line-height: var(--line-global);
+  font-weight: var(--type-bold);
+  color: var(--text-color-white);
+  width: var(--line-global);
+}
+
+.quantity-button:disabled {
+  opacity: 0.5;
+}
+
+.quantity-button:not(:disabled):hover {
+  color: var(--white);
+}
+.quantity-text {
+  display: inline-block;
+  text-align: center;
+  min-width: var(--line-global);
+  margin: 0 calc(var(--line-global) / 2 );
 }
