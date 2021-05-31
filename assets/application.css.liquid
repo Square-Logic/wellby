@@ -116,7 +116,9 @@ ol {
 h1,
 .h1,
 h2,
-.h2 {
+.h2,
+h3,
+.h3 {
   font-family: var(--headline-font);
   font-weight: var(--type-bold);
   color: var(--light-black);
@@ -132,6 +134,12 @@ h2,
 .h2 {
   font-size: var(--type-headline-med);
   line-height: calc(var(--line-global) * 2 );
+}
+
+h3,
+.h3 {
+  font-size: var(--type-body-med);
+  line-height: var(--line-global);
 }
 
 h4,
@@ -486,4 +494,12 @@ button[type="submit"]:not(:disabled):hover,
 
 #add-to-cart-button {
   margin-top: var(--line-global);
+}
+
+/* Cart Page Styles */
+.cart-page-contents {
+  background: var(--light-black);
+  padding: var(--offset-global);
+  max-width: 380px;
+  margin: 0 auto;
 }
