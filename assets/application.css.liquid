@@ -217,6 +217,7 @@ button[type="submit"],
 
 button[type="submit"],
 .button {
+  display: inline-block;
   width: 100%;
   padding: var(--line-global);
   text-align: center;
@@ -226,15 +227,13 @@ button[type="submit"],
   color: var(--white);
 }
 
-button[type="submit"]:disabled,
-.button {
+button[type="submit"]:disabled {
   opacity: 0.75;
   cursor: not-allowed;
   text-decoration: line-through;
 }
 
-button[type="submit"]:not(:disabled):hover,
-.button {
+button[type="submit"]:not(:disabled):hover {
   background: var(--gold-dark);
 }
 
