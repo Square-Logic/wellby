@@ -89,7 +89,7 @@ $(document).ready(function() {
             dataCartHtml = dataCartContents.html(),
             dataCartItemCount = dataCartContents.attr('data-cart-item-count'),
             miniCartContents = $('.js-mini-cart-contents'),
-            cartItemCount = $('js-cart-item-count');
+            cartItemCount = $('.js-cart-item-count');
 
           cartItemCount.text(dataCartItemCount);
           miniCartContents.html(dataCartHtml);
