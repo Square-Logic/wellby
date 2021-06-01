@@ -93,6 +93,12 @@ $(document).ready(function() {
 
           cartItemCount.text(dataCartItemCount);
           miniCartContents.html(dataCartHtml);
+
+          if (parseInt(dataCartItemCount) > 0) {
+            openCart();
+          } else {
+            closeCart();
+          }
         }
       });
     },
