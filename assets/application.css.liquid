@@ -304,17 +304,18 @@ button[type="submit"]:not(:disabled):hover {
 
 /* Header */
 .header-global {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
   background-color: var(--header-background-color);
   padding: var(--line-global) var(--offset-global);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-global .shop-link {
@@ -620,6 +621,7 @@ button[type="submit"]:not(:disabled):hover {
   max-width: 380px;
   background: var(--light-black);
   display: none;
+  z-index: 1;
 }
 
 .mini-cart-contents {
