@@ -619,10 +619,16 @@ button[type="submit"]:not(:disabled):hover {
   width: 100%;
   max-width: 380px;
   background: var(--light-black);
+  display: none;
 }
 
 .mini-cart-contents {
   overflow: auto;
   padding: var(--offset-global);
   height: 100%;
+}
+
+/* Cart Toggle Styles */
+html.mini-cart-open #mini-cart {
+  display: block;
 }
