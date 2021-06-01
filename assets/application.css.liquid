@@ -629,6 +629,10 @@ button[type="submit"]:not(:disabled):hover {
 }
 
 /* Cart Toggle Styles */
+html.mini-cart-open {
+  overflow: hidden;
+}
+
 html.mini-cart-open #mini-cart {
   display: block;
 }
@@ -639,4 +643,9 @@ html.mini-cart-open .cart-link .cart-text {
 
 html.mini-cart-open .cart-link .cart-close-text {
   display: inline-block;
+}
+
+html.mini-cart-open main {
+  opacity: 0.3;
+  pointer-events: none;
 }
