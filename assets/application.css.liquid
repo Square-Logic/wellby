@@ -274,7 +274,12 @@ button[type="submit"]:not(:disabled):hover {
 .valign-center {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+.valign-center > *:first-child {
+  margin-top: auto;
+}
+.valign-center > *:last-child {
+  margin-bottom: auto;
 }
 
 .text-align-center {
@@ -603,4 +608,21 @@ button[type="submit"]:not(:disabled):hover {
   align-items: center;
   justify-content: space-between;
   padding: var(--line-global) 0;
+}
+
+/* Mini Cart Styles */
+#mini-cart {
+  position: fixed;
+  top: var(--header-height);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 380px;
+  background: var(--light-black);
+}
+
+.mini-cart-contents {
+  overflow: auto;
+  padding: var(--offset-global);
+  height: 100%;
 }
