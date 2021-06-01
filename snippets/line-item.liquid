@@ -11,7 +11,7 @@
         <img src="{{ item | img_url: '200x200', crop: 'center' }}" alt="{{ item.title | escape }}">
       </a>
       
-      <a class="remove-line" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+      <a class="remove-line js-remove-line" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
         <img src="{{ 'x-remove.svg' | asset_url }}" alt="Remove">
       </a>
     </div>

@@ -65,11 +65,20 @@ $(document).ready(function() {
         url: '/cart/add.js',
         data: $(this).serialize(),
         dataType: 'json',
-        success: onCartUpdate,
+        success: onCartUpdated,
         error: onError
       })      
     },
-    onCartUpdate = function() {
+    onLineRemoved = function(event) {
+      event.preventDefault();
+
+      let
+        removeLink = $(this),
+        removeQuery = removeLink.attr('href').split('change?')[1];
+
+      $.post('/cart/change.js', removeQuery, onCartUpdated, 'json');
+    },
+    onCartUpdated = function() {
       $.ajax({
         type: 'GET',
         url: '/cart',
@@ -100,4 +109,5 @@ $(document).ready(function() {
 
   $(document).on('submit', '#add-to-cart-form', onAddToCart);
 
+  $(document).on('click', '#mini-cart .js-remove-line', onLineRemoved)
 });
