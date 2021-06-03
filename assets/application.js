@@ -134,5 +134,5 @@ $(document).ready(function() {
 
   $(document).on('click', '#mini-cart .js-remove-line', onLineRemoved);
 
-  $(document).on('click', '.js-cart-link', onCartButtonClick);
+  $(document).on('click', '.js-cart-link, #mini-cart .js-keep-shopping', onCartButtonClick);
 });
