@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('{{ "YoungSerif-Regular.eot" | asset_url }}'); /* IE9 Compat Modes */
+  src: url('{{ "YoungSerif-Regular.eot?#iefix | asset_url }}') format('embedded-opentype'), /* IE6-IE8 */
+       url('{{ "YoungSerif-Regular.woff2 | asset_url }}') format('woff2'), /* Super Modern Browsers */
+       url('{{ "YoungSerif-Regular.woff | asset_url }}') format('woff'), /* Pretty Modern Browsers */
+       url('{{ "YoungSerif-Regular.ttf | asset_url }}')  format('truetype'), /* Safari, Android, iOS */
+       url('{{ "YoungSerif-Regular.svg#svgFontName | asset_url }}') format('svg'); /* Legacy iOS */
+}
+
 :root {
-  --headline-font: 'Georgia', 'Times New Roman', Times, serif;
-  --text-font: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  --headline-font: 'YoungSerif', 'Georgia', 'Times New Roman', Times, serif;
+  --text-font: 'Karla', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
   --black: #000000;
   --white: #FFFFFF;
