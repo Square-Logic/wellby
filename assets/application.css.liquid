@@ -680,3 +680,40 @@ html.mini-cart-open main {
 #page-404 {
   min-height: calc(100vh - var(--header-height));
 }
+
+/* Responsive Wellby Styles */
+@media only screen and (max-width: 1023px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+ }
+ .wrapper {
+  padding-left: var(--line-global);
+  padding-right: var(--line-global);
+ }
+ .mini-cart-contents {
+  padding: var(--line-global);
+ }
+  .product-card .card-image {
+    grid-row: 1;
+    grid-column: 1;
+ }
+  .product-card .card-info {
+    grid-row: 2;
+    grid-column: 1;
+ }
+  .product-image:first-of-type {
+    grid-row: 1;
+ }
+  .product-info {
+    grid-row: 2;
+ }
+  .option-fieldset {
+    max-width: 50%;
+ }
+  .variant-radio + label {
+    display: block;
+ }
+  .footer-top {
+    grid-template-columns: 1fr;
+ }
+}
